@@ -1,7 +1,3 @@
-/**
- * Created by blecolier on 30/04/2014.
- */
-
 PocApp.Module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) {
    this.startWithParent = false;
     var API;

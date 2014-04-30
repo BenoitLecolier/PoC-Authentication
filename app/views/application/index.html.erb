@@ -3,3 +3,9 @@
   <div id="main-region" class="container"></div>
 </div>
 <div id="footer-region"></div>
+
+<%= javascript_tag do %>
+    $(function() {
+        PocApp.start();
+    });
+<% end %>

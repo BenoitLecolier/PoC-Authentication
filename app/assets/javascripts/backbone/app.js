@@ -1,28 +1,29 @@
-/**
- * Created by blecolier on 30/04/2014.
- */
 
-var PocApp;
-PocApp = (function(Backbone, Marionette){
-	var App = new Marionette.Application;
+(function(){
 
-    App.addRegions({
-        headerRegion :  '#header-region',
-        mainRegion :    '#main-region',
-        footerRegion :  '#footer-region'
-    });
+    this.PocApp = (function(Backbone, Marionette){
+        var App;
+        App = new Marionette.Application();
 
-    App.addInitializer(function () {
-        //App.headerRegion.start();
-        App.footerRegion.start();
-        Console.Log('starting footer app');
-    });
+        App.addRegions({
+            headerRegion :  "#header-region",
+            mainRegion :    "#main-region",
+            footerRegion :  "#footer-region"
+        });
 
-    App.on('initialize:after', function(){
-        if(Backbone.history){
-            Backbone.history.start();
-        }
-    });
 
-    return App;
-})(Backbone, Marionette);
+        App.addInitializer(function () {
+            //App.headerRegion.start();
+            // App.footerRegion.start();
+        });
+
+        App.on("initialize:after", function(){
+            if(Backbone.history){
+                return Backbone.history.start();
+            }
+        });
+
+        return App;
+    })(Backbone, Marionette);
+
+}).call(this);
