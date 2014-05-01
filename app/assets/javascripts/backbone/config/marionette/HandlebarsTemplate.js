@@ -1,6 +1,8 @@
 (function (Handlebars, Marionette) {
+
+    // TODO: Move to configuration in order to remove the dependence to the application architecture
     Marionette.Handlebars = {
-        path:       "backbone/apps/",
+        path:       "assets/backbone/apps/",
         extension:  ".handlebars"
     };
 
@@ -12,7 +14,7 @@
             this.compiledTemplate = Handlebars.templates[this.templateId];
         else{
             var template = this.loadTemplate(this.templateId);
-            this.compiledTemplate = this.compiledTemplate(template);
+            this.compiledTemplate = this.compileTemplate(template);
         }
 
         return this.compiledTemplate;

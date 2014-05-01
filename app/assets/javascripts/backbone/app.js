@@ -14,7 +14,7 @@
 
         App.addInitializer(function () {
             //App.headerRegion.start();
-            // App.footerRegion.start();
+            App.module("FooterApp").start();
         });
 
         App.on("initialize:after", function(){

@@ -1,4 +1,4 @@
-PocApp.Module("FooterApp", function (FooterApp, App, Backbone, Marionette, $, _) {
+PocApp.module("FooterApp", function (FooterApp, App, Backbone, Marionette, $, _) {
     this.startWithParent = false;
 
     var API = {
@@ -8,7 +8,6 @@ PocApp.Module("FooterApp", function (FooterApp, App, Backbone, Marionette, $, _)
     };
 
     FooterApp.on("start", function () {
-        Console.Log('starting footer app');
         API.showFooter();
     });
 });

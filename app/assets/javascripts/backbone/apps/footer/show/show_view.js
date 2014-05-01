@@ -1,7 +1,8 @@
 PocApp.module("FooterApp.Show", function (Show, App, Backbone, Marionette, $, _) {
-    Show.Footer = Marionette.View.ItemView.extend({
 
-        template: JST["footer/show/templates/show_footer"],
+    Show.Footer = Marionette.ItemView.extend({
+
+        template: "footer/show/templates/show_footer",
 
         modelEvents: {
             "change": "render"

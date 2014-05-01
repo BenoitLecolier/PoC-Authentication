@@ -1,4 +1,4 @@
-PocApp.Module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) {
+/*PocApp.module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) {
    this.startWithParent = false;
     var API;
 
@@ -9,4 +9,4 @@ PocApp.Module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) 
     HeaderApp.on("start", function() {
         API.loginHeader();
     });
-});
+});*/
