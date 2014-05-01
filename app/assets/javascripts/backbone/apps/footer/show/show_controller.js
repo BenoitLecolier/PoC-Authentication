@@ -1,4 +1,4 @@
-PocApp.Module("FooterApp.Show", function (Show, App, Backbone, Marionette, $, _) {
+PocApp.module("FooterApp.Show", function (Show, App, Backbone, Marionette, $, _) {
 
     Show.Controller = {
         showFooter : function () {
