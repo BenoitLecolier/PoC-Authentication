@@ -3,39 +3,29 @@ PocApp.module("HeaderApp.Show", function (Show, App, Backbone, Marionette, $, _)
     Show.Controller = {
 
         showHeader: function() {
-            this.layout = this.getLayoutView();
+            layout = new Show.Layout;
 
-            this.layout.on("show", (function (that) {
-                that.showMenu();
-                that.showLogin();
+            layout.on("show", (function (that) {
+                return function() {
+                    that.showMenu(layout);
+                    that.showLogin(layout);
+                };
+
             })(this));
 
-            App.headerRegion.show(this.layout);
+            App.headerRegion.show(layout);
         },
 
-        showMenu: function() {
-            var menuView;
-            menuView = this.getMenuView();
-            this.layout.menuRegion.show(menuView);
+        showMenu: function(layout) {
+            var menuView = new Show.Menu;
+            console.log('showing menuView');
+            layout.menuRegion.show(menuView);
         },
 
-        showLogin: function() {
-            var loginView = this.getLoginView();
-            this.layout.loginRegion.show(loginView);
-        },
-
-
-
-        getMenuView: function() {
-            return new Show.Menu;
-        },
-
-        getLoginView: function() {
-            return new Show.Login;
-        },
-
-        getLayoutView: function () {
-            return new Show.Layout;
+        showLogin: function(layout) {
+            var loginView = new Show.Login;
+            console.log('showing loginView');
+            layout.loginRegion.show(loginView);
         }
     };
 });
