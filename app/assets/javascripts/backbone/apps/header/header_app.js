@@ -1,12 +1,13 @@
-/*PocApp.module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) {
-   this.startWithParent = false;
-    var API;
+PocApp.module("HeaderApp", function(HeaderApp, App, Backbone, Marionette, $, _) {
 
+   this.startWithParent = false;
+
+    var API;
     API = {
-        loginHeader: function() { return HeaderApp.Login.Controller.Show();}
+        showHeader:     function() { return HeaderApp.Show.Controller.showHeader(); }
     };
 
     HeaderApp.on("start", function() {
-        API.loginHeader();
+        API.showHeader();
     });
-});*/
+});

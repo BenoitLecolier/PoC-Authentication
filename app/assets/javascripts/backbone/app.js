@@ -13,7 +13,7 @@
 
 
         App.addInitializer(function () {
-            //App.headerRegion.start();
+            App.module("HeaderApp").start();
             App.module("FooterApp").start();
         });
 
