@@ -7,17 +7,21 @@ PocApp.module("HeaderApp.Show", function (Show, App, Backbone, Marionette, $, _)
             menuRegion:     "#menu-region",
             loginRegion:    "#login-region"
         }
-
     });
 
     Show.Menu = Marionette.ItemView.extend({
-        template: "header/show/templates/_menu"
+        template: "header/show/templates/_menu",
+        tagName: "li"
+    });
 
+    Show.Menus = Marionette.CompositeView.extend({
+        template: "header/show/templates/_menus",
+        itemView: Show.Menu,
+        itemViewContainer : "ul"
     });
 
     Show.Login = Marionette.ItemView.extend({
         template: "header/show/templates/_login"
-
     });
 
 });
