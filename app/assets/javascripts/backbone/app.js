@@ -22,7 +22,7 @@
         App.on("initialize:after", function(){
             if(Backbone.history){
                 Backbone.history.start();
-                this.navigate(this.rootRoute);
+                this.navigate(this.rootRoute, { trigger: true });
             }
         });
 
