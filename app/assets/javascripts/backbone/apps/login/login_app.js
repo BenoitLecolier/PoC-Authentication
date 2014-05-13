@@ -14,7 +14,8 @@ PocApp.module("LoginApp", function (LoginApp, App, Backbone, Marionette, $, _) {
         return new LoginApp.Router( {controller: API} );
     });
 
-    PocApp.commands.setHandler("user:signin", function () {
-        console.log("Command received to perform login");
+    PocApp.commands.setHandler("user:signin", function (login) {
+        console.log("Command received to perform login... Do something usefull!!");
+        console.log(login);
     });
 });
