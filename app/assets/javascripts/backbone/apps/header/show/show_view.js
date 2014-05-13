@@ -24,4 +24,12 @@ PocApp.module("HeaderApp.Show", function (Show, App, Backbone, Marionette, $, _)
         template: "header/show/templates/_login"
     });
 
+    Show.Authenticated = Marionette.ItemView.extend({
+        template: "header/show/templates/_authenticated",
+
+        triggers: {
+            "click #signout": "signout:button:clicked"
+        }
+    });
+
 });
