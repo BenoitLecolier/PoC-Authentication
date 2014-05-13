@@ -7,7 +7,7 @@ PocApp.module("LoginApp", function (LoginApp, App, Backbone, Marionette, $, _) {
     });
 
     var API = {
-        showLogin: function(){ return new LoginApp.Show.Controller.showLogin(); }
+        showLogin: function(){ return LoginApp.Show.Controller.showLogin(); }
     };
 
     PocApp.addInitializer(function() {
