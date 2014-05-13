@@ -3,7 +3,7 @@
     // TODO: Move to configuration in order to remove the dependence to the application architecture
     Marionette.Handlebars = {
         path:       "assets/backbone/apps/",
-        extension:  ".handlebars"
+        extension:  ".hbs"
     };
 
     Marionette.TemplateCache.prototype.load = function(){
